@@ -1,0 +1,21 @@
+{
+  "feature": {
+    "env": {
+      "include": "DATABASE_URL;REDIS_CLUSTER_HOST;REDIS_CLUSTER_PORT;REDIS_CLUSTER_PASSWORD;API_KEY;EXTERNAL_API_URL;JWT_SECRET"
+    },
+    "fs": {
+      "mode": "read"
+    },
+    "network": {
+      "incoming": "steal",
+      "outgoing": true
+    }
+  },
+  "target": {
+    "namespace": "staging"
+  },
+  "agent": {
+    "communication_timeout": 30,
+    "startup_timeout": 60
+  }
+} 

@@ -1,0 +1,32 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug with mirrord",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/index.ts",
+      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/ts-node",
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "console": "integratedTerminal",
+      "mirrord": {
+        "enabled": true,
+        "config": ".mirrord/mirrord.json"
+      }
+    },
+    {
+      "name": "Debug locally (without mirrord)",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/index.ts",
+      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/ts-node",
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "console": "integratedTerminal",
+      "envFile": "${workspaceFolder}/.env.local"
+    }
+  ]
+} 
